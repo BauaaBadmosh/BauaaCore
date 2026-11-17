@@ -8,9 +8,9 @@
 ![Discord.js](https://img.shields.io/badge/Discord.js-v14-5865F2?style=flat&logo=discord&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
 ![Groq AI](https://img.shields.io/badge/AI-Groq-F55036?style=flat)
-![Educational License](https://img.shields.io/badge/License-Educational%20Use-lightgrey?style=flat)
+![License](https://img.shields.io/badge/License-Educational%20Use-lightgrey?style=flat)
 
-[About](#about) · [Features](#features) · [Screenshots](#screenshots) · [Architecture](#architecture) · [Commands](#commands) · [Installation](#getting-started)
+[About](#about) · [Features](#features) · [Screenshots](#screenshots) · [Architecture](#architecture) · [Commands](#commands) · [Getting Started](#getting-started)
 
 ---
 
@@ -18,35 +18,43 @@
 
 BauaaCore is a Discord bot developed to make server management and activity monitoring easier.
 
-It combines server event logging, ignore management, and an AI assistant that can be configured for selected channels.
+It combines three main capabilities:
 
-Built using Node.js, discord.js, MongoDB, and the Groq API.
+- **Server Logging** – Monitor important activities across your Discord server.
+- **Ignore Management** – Exclude selected users, bots, or webhooks from logging.
+- **AI Assistant** – Provide AI-powered conversations in configured channels.
+
+Built with Node.js, discord.js, MongoDB, and the Groq API.
 
 **Created and maintained by Bauaa.**
+
+---
 
 ## Features
 
 ### Server Logging
 
-Monitor important activities across your Discord server.
+Keep track of important activities happening across your Discord server.
 
 - Member join and leave events
 - Message deletion and editing
-- Role creation, deletion, and updates
+- Role activity
 - Channel changes
-- Voice channel join and leave activity
+- Voice channel join and leave events
 - Kick and ban events
 - Bot-related activity
+
+Logging events are organized into dedicated channels to make server activity easier to review.
 
 ### Ignore Management
 
 Choose which entities should be excluded from logging.
 
-- Ignore users
+- Add users to the ignore list
 - Ignore bots
 - Ignore webhooks
 - Remove ignored entries
-- View the ignore list
+- View the current ignore list
 
 ### AI Assistant
 
@@ -61,7 +69,7 @@ An AI assistant powered by Groq, available in configured Discord channels.
 
 ### AI Memory
 
-Store and manage user-specific conversational memories using MongoDB.
+Manage user-specific conversational memories stored in MongoDB.
 
 - View saved memories
 - Add new memories
@@ -73,23 +81,25 @@ Store and manage user-specific conversational memories using MongoDB.
 
 ## Screenshots
 
+These screenshots show BauaaCore running inside Discord.
+
 ### Server Logging
 
-BauaaCore records voice channel activity and displays it in Discord log messages.
+Monitor voice channel activity through structured Discord log messages.
 
-![BauaaCore Logging Screenshot](assets/Screenshot%202026-11-17%20092314.png)
+![BauaaCore Server Logging](assets/Screenshot%202026-11-17%20092314.png)
 
 ### Slash Commands
 
-Access BauaaCore features directly using Discord slash commands.
+Access BauaaCore features directly through Discord's slash command interface.
 
-![BauaaCore Commands Screenshot](assets/Screenshot%202026-11-17%20092426.png)
+![BauaaCore Slash Commands](assets/Screenshot%202026-11-17%20092426.png)
 
 ### AI Assistant
 
 Interact with the AI assistant inside a configured Discord channel.
 
-![BauaaCore AI Assistant Screenshot](assets/Screenshot%202026-11-17%20092457.png)
+![BauaaCore AI Assistant](assets/Screenshot%202026-11-17%20092457.png)
 
 ### Bot Profile
 
@@ -107,7 +117,9 @@ Another view of BauaaCore running inside Discord.
 
 ## Architecture
 
-The following diagram illustrates the main components of BauaaCore and how Discord, the bot application, MongoDB, and Groq AI interact.
+BauaaCore connects Discord events and commands with its application services, database, and AI provider.
+
+### System Architecture
 
 ![BauaaCore System Architecture](assets/BauaaCore%20System%20Architecture%20Flow.png)
 
@@ -117,7 +129,7 @@ The following diagram illustrates the main components of BauaaCore and how Disco
 
 ### Main Components
 
-| Component | Purpose |
+| Component | Responsibility |
 |---|---|
 | Node.js | Application runtime |
 | discord.js | Discord events and interactions |
@@ -172,13 +184,27 @@ BauaaCore uses Discord slash commands.
 
 | Command | Description |
 |---|---|
-| `/ai-instructions view` | View current instructions |
-| `/ai-instructions set` | Set custom instructions |
-| `/ai-instructions clear` | Clear custom instructions |
+| `/ai-instructions view` | View current AI instructions |
+| `/ai-instructions set` | Set custom AI instructions |
+| `/ai-instructions clear` | Clear custom AI instructions |
+
+---
+
+## Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Node.js | JavaScript runtime |
+| discord.js | Discord bot development |
+| MongoDB | Database and persistent memory |
+| Groq API | AI integration |
+| dotenv | Environment variable management |
 
 ---
 
 ## Getting Started
+
+Follow these steps to run BauaaCore locally.
 
 ### Requirements
 
@@ -241,7 +267,7 @@ node src/index.js
 
 ## Logging Channel Configuration
 
-The default logging configuration uses these channel names:
+The default logging configuration uses the following channel names:
 
 | Channel | Purpose |
 |---|---|
@@ -284,40 +310,11 @@ When running BauaaCore:
 
 ---
 
-## Project Structure
-
-```text
-BauaaCore/
-│
-├── assets/
-│   ├── bauaa-logo.png
-│   ├── BauaaCore Dragon Wordmark.png
-│   ├── BauaaCore System Architecture Flow.png
-│   └── BauaaCore System Flow Infographic.png
-│
-├── src/
-│   ├── ai/
-│   ├── commands/
-│   ├── config/
-│   ├── events/
-│   ├── utils/
-│   └── index.js
-│
-├── tests/
-├── package.json
-├── .env.example
-├── .gitignore
-├── README.md
-└── LICENSE
-```
-
----
-
 ## License
 
 BauaaCore is provided under the **BauaaCore Educational Use License**.
 
-Permission is limited to personal learning and non-commercial educational use, subject to the terms in the license.
+Permission is limited to personal learning and non-commercial educational use, subject to the terms of the license.
 
 Commercial use and redistribution require prior written permission from the copyright holder.
 
@@ -333,7 +330,8 @@ See [LICENSE](LICENSE) for the complete terms.
 
 Creator and Developer of BauaaCore.
 
-[GitHub Profile](https://github.com/DhruvPatel011) · [BauaaCore Repository](https://github.com/DhruvPatel011/BauaaCore)
+- [GitHub Profile](https://github.com/DhruvPatel011)
+- [BauaaCore Repository](https://github.com/DhruvPatel011/BauaaCore)
 
 ---
 
