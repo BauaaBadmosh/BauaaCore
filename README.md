@@ -1,5 +1,5 @@
 
-<h1 align="center">BauaaCore</h1>
+<h1>BauaaCore</h1>
 
 <p align="center">
   <img src="assets/bauaa-logo.png" height="160" alt="Bauaa Logo">
@@ -265,18 +265,45 @@ Run the startup command configured in your project's `package.json`.
 
 ---
 
-## License
-
-This project is intended for **educational use**.
-
-Please refer to the repository's licensing terms before modifying, distributing, or reusing the source code.
 
 ---
 
+## License
+
 <p align="center">
-  <strong>Built with dedication by Bauaa.</strong>
+  <strong>BauaaCore Educational Use License</strong>
+  <br>
+  Copyright &copy; 2026 Bauaa. All Rights Reserved.
 </p>
 
 <p align="center">
-  <a href="https://github.com/DhruvPatel011/BauaaCore">GitHub Repository</a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-Educational%20Use-white?style=for-the-badge&labelColor=black" alt="Educational Use License">
+  </a>
+  <a href="https://github.com/DhruvPatel011/BauaaCore">
+    <img src="https://img.shields.io/badge/Project-BauaaCore-black?style=for-the-badge&logo=github" alt="BauaaCore Repository">
+  </a>
 </p>
+
+This project is released under the **BauaaCore Educational Use License**.
+
+### Key License Terms
+
+- **Educational Use:** Personal learning and non-commercial use are permitted.
+- **Commercial Use:** Requires prior written permission from the copyright holder.
+- **Redistribution:** Redistribution of original or modified versions requires prior written permission.
+- **Attribution:** Original creator credit and copyright notices must be retained.
+- **Ownership:** All original intellectual property remains with Bauaa.
+
+For complete terms, restrictions, and permissions, read the full license:
+
+<p align="center">
+  <a href="LICENSE"><strong>View Full License</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/DhruvPatel011/BauaaCore/blob/main/LICENSE">Read on GitHub</a>
+</p>
+
+**Created and maintained by Bauaa.**
+
+---
+
