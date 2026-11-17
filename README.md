@@ -1,14 +1,14 @@
 # BauaaCore
 
-![BauaaCore Banner](assets/BauaaCore%20Dragon%20Wordmark.png)
+\<table>   \<tr>     \<td align="center" valign="middle" width="125">       \<img src="assets/bauaa-logo.png" height="110" alt="Bauaa Logo">     \</td>     \<td align="left" valign="middle">       \<img src="assets/BauaaCore%20Dragon%20Wordmark.png" height="110" alt="BauaaCore Dragon Banner">     \</td>   \</tr> \</table>
 
 **A Discord bot for server activity logging, moderation visibility, and AI-powered conversations.**
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![Discord.js](https://img.shields.io/badge/Discord.js-v14-5865F2?style=flat&logo=discord&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
-![Groq AI](https://img.shields.io/badge/AI-Groq-F55036?style=flat)
-![License](https://img.shields.io/badge/License-Educational%20Use-lightgrey?style=flat)
+
+
+
+\
+
 
 [About](#about) · [Features](#features) · [Screenshots](#screenshots) · [Architecture](#architecture) · [Commands](#commands) · [Getting Started](#getting-started)
 
@@ -87,31 +87,31 @@ These screenshots show BauaaCore running inside Discord.
 
 Monitor voice channel activity through structured Discord log messages.
 
-![BauaaCore Server Logging](assets/Screenshot%202026-11-17%20092314.png)
+
 
 ### Slash Commands
 
 Access BauaaCore features directly through Discord's slash command interface.
 
-![BauaaCore Slash Commands](assets/Screenshot%202026-11-17%20092426.png)
+
 
 ### AI Assistant
 
 Interact with the AI assistant inside a configured Discord channel.
 
-![BauaaCore AI Assistant](assets/Screenshot%202026-11-17%20092457.png)
+
 
 ### Bot Profile
 
 The BauaaCore bot profile and its Discord identity.
 
-![BauaaCore Bot Profile](assets/Screenshot%202026-11-17%20092543.png)
+
 
 ### Additional Discord View
 
 Another view of BauaaCore running inside Discord.
 
-![BauaaCore Discord View](assets/Screenshot%202026-11-17%20092904.png)
+
 
 ---
 
@@ -121,21 +121,21 @@ BauaaCore connects Discord events and commands with its application services, da
 
 ### System Architecture
 
-![BauaaCore System Architecture](assets/BauaaCore%20System%20Architecture%20Flow.png)
+
 
 ### System Overview
 
-![BauaaCore System Flow Infographic](assets/BauaaCore%20System%20Flow%20Infographic.png)
+
 
 ### Main Components
 
-| Component | Responsibility |
-|---|---|
-| Node.js | Application runtime |
-| discord.js | Discord events and interactions |
-| MongoDB | Persistent configuration and AI memory |
-| Groq API | AI response generation |
-| dotenv | Environment configuration |
+| Component  | Responsibility                         |
+| ---------- | -------------------------------------- |
+| Node.js    | Application runtime                    |
+| discord.js | Discord events and interactions        |
+| MongoDB    | Persistent configuration and AI memory |
+| Groq API   | AI response generation                 |
+| dotenv     | Environment configuration              |
 
 ---
 
@@ -145,60 +145,60 @@ BauaaCore uses Discord slash commands.
 
 ### Logging
 
-| Command | Description |
-|---|---|
+| Command       | Description                       |
+| ------------- | --------------------------------- |
 | `/setup-logs` | Configure server logging channels |
 
 ### Ignore Management
 
-| Command | Description |
-|---|---|
-| `/ignore add` | Add a user, bot, or webhook to the ignore list |
-| `/ignore remove` | Remove an ignored entry |
-| `/ignore list` | View ignored entries |
+| Command          | Description                                    |
+| ---------------- | ---------------------------------------------- |
+| `/ignore add`    | Add a user, bot, or webhook to the ignore list |
+| `/ignore remove` | Remove an ignored entry                        |
+| `/ignore list`   | View ignored entries                           |
 
 ### AI Assistant
 
-| Command | Description |
-|---|---|
-| `/ai-setup` | Configure the AI assistant |
-| `/ai-add-channel` | Add an AI-enabled channel |
+| Command              | Description                  |
+| -------------------- | ---------------------------- |
+| `/ai-setup`          | Configure the AI assistant   |
+| `/ai-add-channel`    | Add an AI-enabled channel    |
 | `/ai-remove-channel` | Remove an AI-enabled channel |
-| `/ai-list-channels` | List AI-enabled channels |
-| `/ai-enable` | Enable the AI assistant |
-| `/ai-disable` | Disable the AI assistant |
-| `/ai-status` | Check AI status |
-| `/ai-mood` | Change the assistant's mood |
-| `/ai-reset` | Reset conversation context |
+| `/ai-list-channels`  | List AI-enabled channels     |
+| `/ai-enable`         | Enable the AI assistant      |
+| `/ai-disable`        | Disable the AI assistant     |
+| `/ai-status`         | Check AI status              |
+| `/ai-mood`           | Change the assistant's mood  |
+| `/ai-reset`          | Reset conversation context   |
 
 ### AI Memory
 
-| Command | Description |
-|---|---|
-| `/ai-memory list` | View saved memories |
-| `/ai-memory add` | Add a memory |
+| Command             | Description           |
+| ------------------- | --------------------- |
+| `/ai-memory list`   | View saved memories   |
+| `/ai-memory add`    | Add a memory          |
 | `/ai-memory forget` | Forget a saved memory |
-| `/ai-memory clear` | Clear saved memories |
+| `/ai-memory clear`  | Clear saved memories  |
 
 ### AI Instructions
 
-| Command | Description |
-|---|---|
-| `/ai-instructions view` | View current AI instructions |
-| `/ai-instructions set` | Set custom AI instructions |
+| Command                  | Description                  |
+| ------------------------ | ---------------------------- |
+| `/ai-instructions view`  | View current AI instructions |
+| `/ai-instructions set`   | Set custom AI instructions   |
 | `/ai-instructions clear` | Clear custom AI instructions |
 
 ---
 
 ## Technology Stack
 
-| Technology | Purpose |
-|---|---|
-| Node.js | JavaScript runtime |
-| discord.js | Discord bot development |
-| MongoDB | Database and persistent memory |
-| Groq API | AI integration |
-| dotenv | Environment variable management |
+| Technology | Purpose                         |
+| ---------- | ------------------------------- |
+| Node.js    | JavaScript runtime              |
+| discord.js | Discord bot development         |
+| MongoDB    | Database and persistent memory  |
+| Groq API   | AI integration                  |
+| dotenv     | Environment variable management |
 
 ---
 
@@ -269,17 +269,17 @@ node src/index.js
 
 The default logging configuration uses the following channel names:
 
-| Channel | Purpose |
-|---|---|
-| `all-logs` | General server logs |
-| `kick-ban-logs` | Kick and ban events |
-| `main-bots-logs` | Bot-related activity |
-| `role-logs` | Role activity |
-| `deleted-msg-logs` | Deleted messages |
-| `edited-msg-logs` | Edited messages |
-| `vc-logs` | Voice channel activity |
-| `channel-logs` | Channel activity |
-| `members-log` | Member activity |
+| Channel            | Purpose                |
+| ------------------ | ---------------------- |
+| `all-logs`         | General server logs    |
+| `kick-ban-logs`    | Kick and ban events    |
+| `main-bots-logs`   | Bot-related activity   |
+| `role-logs`        | Role activity          |
+| `deleted-msg-logs` | Deleted messages       |
+| `edited-msg-logs`  | Edited messages        |
+| `vc-logs`          | Voice channel activity |
+| `channel-logs`     | Channel activity       |
+| `members-log`      | Member activity        |
 
 Use `/setup-logs` to configure logging channels for your server.
 
@@ -289,11 +289,11 @@ Use `/setup-logs` to configure logging channels for your server.
 
 BauaaCore exposes HTTP endpoints for basic application monitoring.
 
-| Endpoint | Purpose |
-|---|---|
-| `/` | Basic application response |
-| `/health` | Health check |
-| `/ready` | Readiness check |
+| Endpoint  | Purpose                    |
+| --------- | -------------------------- |
+| `/`       | Basic application response |
+| `/health` | Health check               |
+| `/ready`  | Readiness check            |
 
 ---
 
@@ -324,14 +324,11 @@ See [LICENSE](LICENSE) for the complete terms.
 
 ## Author
 
-![Bauaa Logo](assets/bauaa-logo.png)
-
 **Bauaa**
 
 Creator and Developer of BauaaCore.
 
-- [GitHub Profile](https://github.com/DhruvPatel011)
-- [BauaaCore Repository](https://github.com/DhruvPatel011/BauaaCore)
+[GitHub Profile](https://github.com/DhruvPatel011) · [BauaaCore Repository](https://github.com/DhruvPatel011/BauaaCore)
 
 ---
 
