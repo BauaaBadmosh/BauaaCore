@@ -1,125 +1,200 @@
 # BauaaCore
 
-A Discord bot for server logging, moderation tracking, and AI-powered conversations.
+\<p align="center">
+&#x20; \<img src="assets/BauaaCore%20Dragon%20Wordmark.png" alt="BauaaCore – Discord Bot" width="850">
+\</p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/Discord.js-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord.js">
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white" alt="MongoDB">
-  <img src="https://img.shields.io/badge/Groq_AI-F55036?style=flat" alt="Groq AI">
-</p>
+\<p align="center">
+&#x20; A Discord bot for server activity logging, moderation visibility, and AI-powered conversations.
+\</p>
+
+\<p align="center">
+&#x20; \<img src="[https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white](https://img.shields.io/badge/Node.js-339933?style=flat\&logo=node.js\&logoColor=white)" alt="Node.js">
+&#x20; \<img src="[https://img.shields.io/badge/Discord.js-v14-5865F2?style=flat&logo=discord&logoColor=white](https://img.shields.io/badge/Discord.js-v14-5865F2?style=flat\&logo=discord\&logoColor=white)" alt="Discord.js">
+&#x20; \<img src="[https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white](https://img.shields.io/badge/MongoDB-47A248?style=flat\&logo=mongodb\&logoColor=white)" alt="MongoDB">
+&#x20; \<img src="[https://img.shields.io/badge/AI-Groq-F55036?style=flat](https://img.shields.io/badge/AI-Groq-F55036?style=flat)" alt="Groq AI">
+&#x20; \<img src="[https://img.shields.io/badge/License-Educational%20Use-lightgrey?style=flat](https://img.shields.io/badge/License-Educational%20Use-lightgrey?style=flat)" alt="License">
+\</p>
+
+\<p align="center">
+&#x20; \<a href="#about">About\</a> ·
+&#x20; \<a href="#features">Features\</a> ·
+&#x20; \<a href="#screenshots">Screenshots\</a> ·
+&#x20; \<a href="#commands">Commands\</a> ·
+&#x20; \<a href="#getting-started">Installation\</a>
+\</p>
 
 ---
 
 ## About
 
-BauaaCore is a Discord bot built to make server management easier. It handles server activity logs, keeps track of moderation events, and provides an AI assistant that can be used in selected channels.
+BauaaCore is a Discord bot designed to make server management and activity monitoring easier.
 
-The bot uses MongoDB to store configuration and AI memory, so important information can be retained between restarts.
+It brings together server event logging, ignore management, and an AI assistant that can be configured for selected channels.
+
+The bot uses Node.js and discord.js for Discord interactions, MongoDB for persistent configuration and AI memory, and Groq for AI-powered responses.
+
+Built and maintained by **Bauaa**.
 
 ## Features
 
 ### Server Logging
+
 Keep track of important activities happening across your Discord server.
 
 - Member join and leave events
 - Message deletion and editing
-- Role creation, deletion and updates
+- Role creation, deletion, and updates
 - Channel changes
-- Voice channel activity
+- Voice channel join and leave activity
 - Kick and ban events
 - Bot-related activity
 
-Logs can be organized into separate channels to make server activity easier to review.
+Logging events can be organized into dedicated channels, making server activity easier to review.
 
 ### Ignore Management
 
-Not every event needs to appear in your logs. The ignore system lets you exclude specific entities from logging.
+Control which entities should be excluded from logging.
 
 - Ignore users
 - Ignore bots
 - Ignore webhooks
-- View and manage ignored entries
+- Remove ignored entries
+- View the ignore list
 
 ### AI Assistant
 
-BauaaCore also includes an AI assistant powered by the Groq API.
+BauaaCore includes an AI assistant powered by the Groq API.
 
-- Enable AI in selected channels
-- Add or remove AI-enabled channels
-- Configure the assistant's mood and instructions
-- Enable or disable AI whenever needed
+- Configure AI-enabled channels
+- Enable or disable the assistant
+- View the current AI status
+- Change the assistant's mood
+- Set custom AI instructions
 - Reset conversation context
-- Check the current AI status
 
 ### AI Memory
 
-The assistant can retain user-specific information using MongoDB.
+The assistant supports user-specific memory stored in MongoDB.
 
-You can add, view, forget, or clear saved memories through slash commands. Stored memories are configured with a 180-day expiry.
+- View saved memories
+- Add new memories
+- Forget individual memories
+- Clear saved memories
+- Memory expiry configured for 180 days
+
+---
+
+## Screenshots
+
+A look at BauaaCore running inside Discord.
+
+### Server Logging
+
+Voice channel activity is displayed through organized Discord log messages.
+
+\<p align="center">
+&#x20; \<img src="assets/Screenshot%202026-11-17%20092314.png" alt="BauaaCore voice channel logging" width="100%">
+\</p>
+
+### Slash Commands
+
+Access bot functionality directly through Discord's slash command interface.
+
+\<p align="center">
+&#x20; \<img src="assets/Screenshot%202026-11-17%20092426.png" alt="BauaaCore slash commands" width="100%">
+\</p>
+
+### AI Assistant
+
+Interact with the AI assistant directly inside a configured Discord channel.
+
+\<p align="center">
+&#x20; \<img src="assets/Screenshot%202026-11-17%20092457.png" alt="BauaaCore AI assistant conversation" width="100%">
+\</p>
+
+### Bot Profile
+
+\<p align="center">
+&#x20; \<img src="assets/Screenshot%202026-11-17%20092543.png" alt="BauaaCore Discord bot profile" width="420">
+\</p>
+
+---
+
+## Architecture
+
+BauaaCore connects Discord events and commands with its bot services, database, and AI provider.
+
+\<p align="center">
+&#x20; \<img src="assets/BauaaCore%20System%20Architecture%20Flow\.png" alt="BauaaCore system architecture" width="100%">
+\</p>
+
+The following visual provides another overview of the system's main components.
+
+\<p align="center">
+&#x20; \<img src="assets/BauaaCore%20System%20Flow%20Infographic.png" alt="BauaaCore system flow infographic" width="100%">
+\</p>
+
+### Main Components
+
+| Component  | Responsibility                  |
+| ---------- | ------------------------------- |
+| Discord.js | Discord events and interactions |
+| Node.js    | Application runtime             |
+| MongoDB    | Configuration and AI memory     |
+| Groq API   | AI response generation          |
+| dotenv     | Environment configuration       |
 
 ---
 
 ## Commands
 
-All commands are available through Discord slash commands.
+BauaaCore uses Discord slash commands.
 
 ### Logging
 
-| Command | Description |
-|---|---|
+| Command       | Description                       |
+| ------------- | --------------------------------- |
 | `/setup-logs` | Configure server logging channels |
 
 ### Ignore Management
 
-| Command | Description |
-|---|---|
-| `/ignore add` | Add a user, bot, or webhook to the ignore list |
-| `/ignore remove` | Remove an entry from the ignore list |
-| `/ignore list` | View ignored entries |
+| Command          | Description                                    |
+| ---------------- | ---------------------------------------------- |
+| `/ignore add`    | Add a user, bot, or webhook to the ignore list |
+| `/ignore remove` | Remove an entry from the ignore list           |
+| `/ignore list`   | View ignored entries                           |
 
 ### AI Assistant
 
-| Command | Description |
-|---|---|
-| `/ai-setup` | Configure the AI assistant |
-| `/ai-add-channel` | Allow AI in a channel |
-| `/ai-remove-channel` | Remove AI access from a channel |
-| `/ai-list-channels` | View AI-enabled channels |
-| `/ai-enable` | Enable the AI assistant |
-| `/ai-disable` | Disable the AI assistant |
-| `/ai-status` | Check the current AI status |
-| `/ai-mood` | Change the assistant's mood |
-| `/ai-reset` | Reset conversation context |
+| Command              | Description                         |
+| -------------------- | ----------------------------------- |
+| `/ai-setup`          | Configure the AI assistant          |
+| `/ai-add-channel`    | Add a channel where AI is available |
+| `/ai-remove-channel` | Remove an AI-enabled channel        |
+| `/ai-list-channels`  | View AI-enabled channels            |
+| `/ai-enable`         | Enable the AI assistant             |
+| `/ai-disable`        | Disable the AI assistant            |
+| `/ai-status`         | Check AI status                     |
+| `/ai-mood`           | Change the assistant's mood         |
+| `/ai-reset`          | Reset conversation context          |
 
 ### AI Memory
 
-| Command | Description |
-|---|---|
-| `/ai-memory list` | View saved memories |
-| `/ai-memory add` | Add a memory |
+| Command             | Description           |
+| ------------------- | --------------------- |
+| `/ai-memory list`   | View saved memories   |
+| `/ai-memory add`    | Add a memory          |
 | `/ai-memory forget` | Forget a saved memory |
-| `/ai-memory clear` | Clear saved memories |
+| `/ai-memory clear`  | Clear saved memories  |
 
 ### AI Instructions
 
-| Command | Description |
-|---|---|
-| `/ai-instructions view` | View current instructions |
-| `/ai-instructions set` | Set custom instructions |
-| `/ai-instructions clear` | Clear custom instructions |
-
----
-
-## Technology
-
-BauaaCore is built using the following technologies:
-
-- **Node.js** – Application runtime
-- **Discord.js** – Discord bot functionality
-- **MongoDB** – Database and persistent storage
-- **Groq API** – AI responses
-- **dotenv** – Environment variable management
+| Command                  | Description                  |
+| ------------------------ | ---------------------------- |
+| `/ai-instructions view`  | View current AI instructions |
+| `/ai-instructions set`   | Set custom AI instructions   |
+| `/ai-instructions clear` | Clear custom AI instructions |
 
 ---
 
@@ -142,7 +217,7 @@ Before starting, make sure you have:
 git clone https://github.com/DhruvPatel011/BauaaCore.git
 ```
 
-### 2. Open the project folder
+### 2. Navigate to the project
 
 ```bash
 cd BauaaCore
@@ -156,7 +231,7 @@ npm install
 
 ### 4. Configure environment variables
 
-Create a `.env` file in the root directory and add your credentials:
+Create a `.env` file in the project root.
 
 ```env
 DISCORD_TOKEN=your_discord_bot_token
@@ -170,7 +245,9 @@ GROQ_MODEL=openai/gpt-oss-20b
 
 Replace the example values with your actual credentials.
 
-`PORT` and `GROQ_MODEL` are optional. The default port is `10000`, and the default model is `openai/gpt-oss-20b`.
+`PORT` and `GROQ_MODEL` are optional. The application uses `10000` and `openai/gpt-oss-20b` as their defaults.
+
+**Keep your credentials private. Never upload your `.env` file to GitHub.**
 
 ### 5. Start the bot
 
@@ -178,27 +255,33 @@ Replace the example values with your actual credentials.
 npm start
 ```
 
+The start script runs:
+
+```bash
+node src/index.js
+```
+
 Once configured correctly, BauaaCore will connect to Discord and initialize its services.
 
 ---
 
-## Logging Channels
+## Logging Channel Configuration
 
 The default logging configuration uses the following channel names:
 
-| Channel | Purpose |
-|---|---|
-| `all-logs` | General server logs |
-| `kick-ban-logs` | Kick and ban events |
-| `main-bots-logs` | Bot-related logs |
-| `role-logs` | Role activity |
-| `deleted-msg-logs` | Deleted messages |
-| `edited-msg-logs` | Edited messages |
-| `vc-logs` | Voice activity |
-| `channel-logs` | Channel activity |
-| `members-log` | Member activity |
+| Channel            | Purpose                |
+| ------------------ | ---------------------- |
+| `all-logs`         | General server logs    |
+| `kick-ban-logs`    | Kick and ban events    |
+| `main-bots-logs`   | Bot-related activity   |
+| `role-logs`        | Role activity          |
+| `deleted-msg-logs` | Deleted messages       |
+| `edited-msg-logs`  | Edited messages        |
+| `vc-logs`          | Voice channel activity |
+| `channel-logs`     | Channel activity       |
+| `members-log`      | Member activity        |
 
-Use `/setup-logs` to configure the logging channels.
+Use `/setup-logs` to configure logging channels for your server.
 
 ---
 
@@ -206,38 +289,77 @@ Use `/setup-logs` to configure the logging channels.
 
 BauaaCore also provides HTTP endpoints for basic application monitoring.
 
-| Endpoint | Purpose |
-|---|---|
-| `/` | Basic application response |
-| `/health` | Application health check |
-| `/ready` | Readiness check |
+| Endpoint  | Purpose                    |
+| --------- | -------------------------- |
+| `/`       | Basic application response |
+| `/health` | Application health check   |
+| `/ready`  | Readiness check            |
 
 ---
 
 ## Security
 
-Keep your credentials safe.
+A few important practices when running BauaaCore:
 
 - Never share your Discord bot token.
-- Do not upload your `.env` file to GitHub.
 - Keep your MongoDB connection string private.
 - Never expose your Groq API key.
+- Do not upload `.env` files or credentials to GitHub.
+- Grant the bot only the Discord permissions it needs.
+- Configure the required Gateway Intents in the Discord Developer Portal.
+
+---
+
+## Project Structure
+
+The main application is organized into the following directories:
+
+```text
+BauaaCore/
+│
+├── assets/
+│   └── images and project visuals
+│
+├── src/
+│   ├── ai/
+│   ├── commands/
+│   ├── config/
+│   ├── events/
+│   ├── utils/
+│   └── index.js
+│
+├── tests/
+├── package.json
+├── .env.example
+├── .gitignore
+├── README.md
+└── LICENSE
+```
 
 ---
 
 ## License
 
-This project is provided under the **BauaaCore Educational Use License**.
+BauaaCore is provided under the **BauaaCore Educational Use License**.
 
-Please read the [LICENSE](LICENSE) file before using, modifying, or distributing this project.
+Permission is limited to personal learning and non-commercial educational use, subject to the terms of the license.
+
+Commercial use and redistribution require prior written permission from the copyright holder.
+
+Read the [LICENSE](LICENSE) file before using or modifying the project.
 
 ---
 
 ## Author
 
-**Bauaa**
+\<p align="center">
+&#x20; \<img src="assets/bauaa-logo.png" alt="Bauaa logo" width="100">
+\</p>
 
-GitHub: [@DhruvPatel011](https://github.com/DhruvPatel011)
+\<p align="center">   \<strong>Bauaa\</strong>\<br>   Creator and Developer of BauaaCore \</p>
 
-Repository: [BauaaCore](https://github.com/DhruvPatel011/BauaaCore)
+\<p align="center">   \<a href="[https://github.com/DhruvPatel011](https://github.com/DhruvPatel011)">GitHub Profile\</a> ·   \<a href="[https://github.com/DhruvPatel011/BauaaCore](https://github.com/DhruvPatel011/BauaaCore)">BauaaCore Repository\</a> \</p>
 
+---
+
+\<p align="center">   \<strong>BauaaCore\</strong>\<br>   Keeping Discord communities organized. \</p>
