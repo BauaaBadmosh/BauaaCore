@@ -1,16 +1,9 @@
-
 # BauaaCore
 
-<table>
-  <tr>
-    <td width="125" align="center" valign="middle">
-      <img src="assets/bauaa-logo.png" width="110" height="110" alt="Bauaa Logo">
-    </td>
-    <td valign="middle">
-      <img src="assets/BauaaCore%20Dragon%20Wordmark.png" height="110" alt="BauaaCore Dragon Wordmark">
-    </td>
-  </tr>
-</table>
+<img src="assets/bauaa-logo.png" width="80" align="left" alt="Bauaa Logo">
+<img src="assets/BauaaCore%20Dragon%20Wordmark.png" height="90" alt="BauaaCore Dragon Wordmark">
+
+<br clear="left">
 
 **A Discord bot for server activity logging, moderation visibility, and AI-powered conversations.**
 
@@ -97,12 +90,6 @@ Monitor voice channel activity through structured Discord log messages.
 
 <img src="assets/Screenshot%202026-11-17%20092314.png" width="100%" alt="BauaaCore Server Logging">
 
-### Slash Commands
-
-Access BauaaCore features directly through Discord's slash command interface.
-
-<img src="assets/Screenshot%202026-11-17%20092426.png" width="100%" alt="BauaaCore Slash Commands">
-
 ### AI Assistant
 
 Interact with the AI assistant inside a configured Discord channel.
@@ -113,7 +100,7 @@ Interact with the AI assistant inside a configured Discord channel.
 
 The BauaaCore bot profile and its Discord identity.
 
-<img src="assets/Screenshot%202026-11-17%20092543.png" width="100%" alt="BauaaCore Bot Profile">
+<img src="assets/Screenshot%202026-11-17%20092543.png" width="35%" alt="BauaaCore Bot Profile">
 
 ### Additional Discord View
 
@@ -196,6 +183,12 @@ BauaaCore uses Discord slash commands.
 | `/ai-instructions set` | Set custom AI instructions |
 | `/ai-instructions clear` | Clear custom AI instructions |
 
+### Command Interface
+
+Access BauaaCore features directly through Discord's slash command interface.
+
+<img src="assets/Screenshot%202026-11-17%20092426.png" width="100%" alt="BauaaCore Slash Commands">
+
 ---
 
 ## Technology Stack
@@ -225,119 +218,3 @@ Follow these steps to run BauaaCore locally.
 
 ```bash
 git clone https://github.com/DhruvPatel011/BauaaCore.git
-```
-
-### 2. Navigate to the project
-
-```bash
-cd BauaaCore
-```
-
-### 3. Install dependencies
-
-```bash
-npm install
-```
-
-### 4. Configure environment variables
-
-Create a `.env` file in the project root.
-
-```env
-DISCORD_TOKEN=your_discord_bot_token
-MONGODB_URI=your_mongodb_connection_string
-GROQ_API_KEY=your_groq_api_key
-BOT_OWNER_ID=your_discord_user_id
-
-PORT=10000
-GROQ_MODEL=openai/gpt-oss-20b
-```
-
-Replace the example values with your actual credentials.
-
-`PORT` and `GROQ_MODEL` are optional and use the application's defaults when omitted.
-
-**Never upload your actual `.env` file or private credentials to GitHub.**
-
-### 5. Start BauaaCore
-
-```bash
-npm start
-```
-
-The start script executes:
-
-```bash
-node src/index.js
-```
-
----
-
-## Logging Channel Configuration
-
-The default logging configuration uses the following channel names:
-
-| Channel | Purpose |
-|---|---|
-| `all-logs` | General server logs |
-| `kick-ban-logs` | Kick and ban events |
-| `main-bots-logs` | Bot-related activity |
-| `role-logs` | Role activity |
-| `deleted-msg-logs` | Deleted messages |
-| `edited-msg-logs` | Edited messages |
-| `vc-logs` | Voice channel activity |
-| `channel-logs` | Channel activity |
-| `members-log` | Member activity |
-
-Use `/setup-logs` to configure logging channels for your server.
-
----
-
-## Health Endpoints
-
-BauaaCore exposes HTTP endpoints for basic application monitoring.
-
-| Endpoint | Purpose |
-|---|---|
-| `/` | Basic application response |
-| `/health` | Health check |
-| `/ready` | Readiness check |
-
----
-
-## Security
-
-When running BauaaCore:
-
-- Keep your Discord bot token private.
-- Protect your MongoDB connection string.
-- Never expose your Groq API key.
-- Do not commit `.env` files.
-- Grant the bot only the Discord permissions it requires.
-- Configure the necessary Gateway Intents in the Discord Developer Portal.
-
----
-
-## License
-
-BauaaCore is provided under the **BauaaCore Educational Use License**.
-
-Permission is limited to personal learning and non-commercial educational use, subject to the terms of the license.
-
-Commercial use and redistribution require prior written permission from the copyright holder.
-
-See [LICENSE](LICENSE) for the complete terms.
-
----
-
-## Author
-
-**Bauaa**
-
-Creator and Developer of BauaaCore.
-
-[GitHub Profile](https://github.com/DhruvPatel011) · [BauaaCore Repository](https://github.com/DhruvPatel011/BauaaCore)
-
----
-
-**BauaaCore** — Keeping Discord communities organized.
